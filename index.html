@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My School Website</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Welcome to Our School</h1>
+  <p>Pay your fees online securely.</p>
+
+  <!-- PayFast Payment Form -->
+  <form action="https://sandbox.payfast.co.za/eng/process" method="post">
+    <input type="hidden" name="merchant_id" value="10049376">
+    <input type="hidden" name="merchant_key" value="vqm65ccysr0oa">
+    <input type="hidden" name="return_url" value="http://localhost:3000/sucess.html">
+    <input type="hidden" name="cancel_url" value="http://localhost:3000/cancel.html">
+    <input type="hidden" name="notify_url" value="http://localhost:3000/notify">
+    
+    <!-- Product details -->
+    <input type="hidden" name="amount" value="500.00">
+    <input type="hidden" name="item_name" value="School Fees">
+    
+    <button type="submit">Pay Fees</button>
+  </form>
+</body>
+</html>
